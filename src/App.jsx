@@ -80,7 +80,7 @@ const INITIAL_STUDENTS = [
     phone: '+63 912 345 6789',
     email: 'lyndontabinas@gmail.com',
     facebook: 'Lyndon Tabinas',
-    photo: '/Student-picture.png',
+    photo: '/Student-picture-008.jpg',
     status: 'Active',
   },
 ]
