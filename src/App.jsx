@@ -48,7 +48,7 @@ const INITIAL_STUDENTS = [
     phone: '+63 953 2733 909',
     email: 'aarondimzon@gmail.com',
     facebook: 'Aaron Dimzon',
-    photo: '/Student-picture.png',
+    photo: '/Student-picture-007.png',
     status: 'Active',
   },
   {
@@ -689,7 +689,6 @@ export default function App () {
         </div>
 
         {/* All Students */}
-        <div className="section-label">All Students</div>
 
         {students.length === 0 ? (
           <div className="empty-state">
