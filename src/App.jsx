@@ -86,127 +86,127 @@ const INITIAL_STUDENTS = [
 ]
 
 /* ── Icons ───────────────────────────────────────────── */
-function GradCapIcon ({ style }) {
+function GradCapIcon({ style }) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" style={style}>
-      <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zm0 2.18l7.69 4.18L12 13.36 4.31 9.36 12 5.18zM5 13.18v4l7 3.82 7-3.82v-4l-7 3.82-7-3.82z"/>
+      <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zm0 2.18l7.69 4.18L12 13.36 4.31 9.36 12 5.18zM5 13.18v4l7 3.82 7-3.82v-4l-7 3.82-7-3.82z" />
     </svg>
   )
 }
 
-function PersonIcon ({ className }) {
+function PersonIcon({ className }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-      <circle cx="12" cy="8" r="4"/>
-      <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+      <circle cx="12" cy="8" r="4" />
+      <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
     </svg>
   )
 }
 
-function HeartIcon () {
+function HeartIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ width: 16, height: 16, color: '#f59e0b' }}>
-      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
     </svg>
   )
 }
 
-function PhoneIcon () {
+function PhoneIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ width: 16, height: 16 }}>
-      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.6 1.25h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.86A16 16 0 0 0 14 15l.86-.86a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16.92z"/>
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.6 1.25h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.86A16 16 0 0 0 14 15l.86-.86a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16.92z" />
     </svg>
   )
 }
 
-function MailIcon () {
+function MailIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ width: 16, height: 16 }}>
-      <rect x="2" y="4" width="20" height="16" rx="2"/>
-      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+      <rect x="2" y="4" width="20" height="16" rx="2" />
+      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
     </svg>
   )
 }
 
-function BookIcon () {
+function BookIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ width: 14, height: 14 }}>
-      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
-      <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+      <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
     </svg>
   )
 }
 
-function BuildingIcon () {
+function BuildingIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ width: 14, height: 14 }}>
-      <rect x="3" y="3" width="18" height="18" rx="2"/>
-      <line x1="3" y1="9" x2="21" y2="9"/>
+      <rect x="3" y="3" width="18" height="18" rx="2" />
+      <line x1="3" y1="9" x2="21" y2="9" />
     </svg>
   )
 }
 
-function ChevronLeft () {
+function ChevronLeft() {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-      <polyline points="15 18 9 12 15 6"/>
+      <polyline points="15 18 9 12 15 6" />
     </svg>
   )
 }
 
-function ChevronRight () {
+function ChevronRight() {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-      <polyline points="9 18 15 12 9 6"/>
+      <polyline points="9 18 15 12 9 6" />
     </svg>
   )
 }
 
-function CloseIcon () {
+function CloseIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <line x1="18" y1="6" x2="6" y2="18"/>
-      <line x1="6" y1="6" x2="18" y2="18"/>
+      <line x1="18" y1="6" x2="6" y2="18" />
+      <line x1="6" y1="6" x2="18" y2="18" />
     </svg>
   )
 }
 
-function CopyIcon () { return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> }
-function QrIcon () { return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3z"/><path d="M17 17h4v4"/><path d="M17 21h4"/></svg> }
-function LinkIcon () { return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg> }
-function EditIcon () { return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg> }
-function TrashIcon () { return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/></svg> }
-function UploadIcon () { return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg> }
-function FacebookIcon () { return <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg> }
-function QrCodeOutlineIcon ({ style }) { return <svg style={style} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><path d="M14 17h.01"/><path d="M17 14h.01"/><path d="M17 17h.01"/><path d="M20 14h.01"/><path d="M20 17h.01"/><path d="M14 20h.01"/><path d="M17 20h.01"/><path d="M20 20h.01"/><path d="M7 7h.01"/><path d="M17 7h.01"/><path d="M7 17h.01"/></svg> }
-function MinimizeIcon () { return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"/></svg> }
-function MaximizeIcon () { return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg> }
+function CopyIcon() { return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="9" y="9" width="13" height="13" rx="2" /><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" /></svg> }
+function QrIcon() { return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="7" height="7" /><rect x="14" y="3" width="7" height="7" /><rect x="3" y="14" width="7" height="7" /><path d="M14 14h3v3h-3z" /><path d="M17 17h4v4" /><path d="M17 21h4" /></svg> }
+function LinkIcon() { return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" /><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" /></svg> }
+function EditIcon() { return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" /><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" /></svg> }
+function TrashIcon() { return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="3 6 5 6 21 6" /><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6" /><path d="M10 11v6" /><path d="M14 11v6" /><path d="M9 6V4h6v2" /></svg> }
+function UploadIcon() { return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="17 8 12 3 7 8" /><line x1="12" y1="3" x2="12" y2="15" /></svg> }
+function FacebookIcon() { return <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" /></svg> }
+function QrCodeOutlineIcon({ style }) { return <svg style={style} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="4" y="4" width="6" height="6" rx="1" /><rect x="14" y="4" width="6" height="6" rx="1" /><rect x="4" y="14" width="6" height="6" rx="1" /><path d="M14 17h.01" /><path d="M17 14h.01" /><path d="M17 17h.01" /><path d="M20 14h.01" /><path d="M20 17h.01" /><path d="M14 20h.01" /><path d="M17 20h.01" /><path d="M20 20h.01" /><path d="M7 7h.01" /><path d="M17 7h.01" /><path d="M7 17h.01" /></svg> }
+function MinimizeIcon() { return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3" /></svg> }
+function MaximizeIcon() { return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" /></svg> }
 
 /* ── Add Student Modal ───────────────────────────────── */
-function AddStudentModal ({ onClose, onAdd }) {
+function AddStudentModal({ onClose, onAdd }) {
   const [form, setForm] = useState({
     name: '', slug: '', course: '', year: '', school: '',
     photo: null, solicitationTitle: '', description: '', phone: '', email: '',
   })
 
-  function handleChange (e) {
+  function handleChange(e) {
     const { name, value } = e.target
     setForm(prev => ({ ...prev, [name]: value }))
   }
 
-  function generateSlug () {
+  function generateSlug() {
     const slug = form.name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
     setForm(prev => ({ ...prev, slug }))
   }
 
-  function handlePhotoChange (e) {
+  function handlePhotoChange(e) {
     const file = e.target.files[0]
     if (!file) return
     const url = URL.createObjectURL(file)
     setForm(prev => ({ ...prev, photo: url }))
   }
 
-  function handleSubmit (e) {
+  function handleSubmit(e) {
     e.preventDefault()
     if (!form.name.trim()) return
     onAdd({
@@ -346,32 +346,44 @@ function AddStudentModal ({ onClose, onAdd }) {
 }
 
 /* ── Action Modal ────────────────────────────────────── */
-function ActionModal({ isOpen, onClose, type, value }) {
+function ActionModal({ isOpen, onClose, type, value, onPrev, onNext }) {
   if (!isOpen) return null;
 
   let title = '';
   let content = null;
+  let headerIcon = null;
+
+  const accentColor = type === 'phone' ? '#f59e0b' :
+    type === 'email' ? '#0ea5e9' :
+      type === 'facebook' ? '#1877f2' :
+        '#10b981';
 
   switch (type) {
     case 'phone':
       title = 'Phone Number';
-      content = <p style={{ fontSize: '24px', fontWeight: 'bold', margin: '20px 0', textAlign: 'center' }}>{value || 'Not provided'}</p>;
+      headerIcon = <PhoneIcon />;
+      content = <div className="modal-data-text" style={{ color: accentColor }}>{value || 'Not provided'}</div>;
       break;
     case 'email':
       title = 'Email Address';
-      content = <p style={{ fontSize: '20px', fontWeight: 'bold', margin: '20px 0', textAlign: 'center', wordBreak: 'break-all' }}>{value || 'Not provided'}</p>;
+      headerIcon = <MailIcon />;
+      content = <div className="modal-data-text" style={{ color: accentColor }}>{value || 'Not provided'}</div>;
       break;
     case 'facebook':
       title = 'Facebook Profile';
-      content = <p style={{ fontSize: '20px', fontWeight: 'bold', margin: '20px 0', textAlign: 'center' }}>{value || 'Not provided'}</p>;
+      headerIcon = <FacebookIcon />;
+      content = <div className="modal-data-text" style={{ color: accentColor }}>{value || 'Not provided'}</div>;
       break;
     case 'qr':
       title = 'Scan QR Code';
+      headerIcon = <QrCodeOutlineIcon />;
       content = (
-         <div style={{ textAlign: 'center', margin: '20px 0', color: '#6b7280' }}>
-            <QrCodeOutlineIcon style={{ width: 80, height: 80, margin: '0 auto 16px', display: 'block', opacity: 0.5 }} />
-            <p>QR code functionality will be provided soon.</p>
-         </div>
+        <div style={{ textAlign: 'center', marginTop: 10, color: '#8a9ab5' }}>
+          <div style={{ background: '#ffffff', padding: '16px', borderRadius: '16px', display: 'inline-block', marginBottom: '16px' }}>
+            <QrCodeOutlineIcon style={{ width: 120, height: 120, display: 'block', color: '#1a1f3a' }} />
+          </div>
+          <p style={{ fontSize: '15px' }}>Official QR Code is being generated and will be updated shortly.</p>
+        </div>
       );
       break;
     default:
@@ -380,18 +392,33 @@ function ActionModal({ isOpen, onClose, type, value }) {
 
   return (
     <div className="modal-overlay" onClick={e => e.target === e.currentTarget && onClose()}>
-      <div className="modal" style={{ maxWidth: '400px', display: 'flex', flexDirection: 'column' }}>
-        <div className="modal-header">
+      <div className="modal action-modal-premium" style={{ borderTop: `4px solid ${accentColor}` }}>
+        <button className="modal-close-premium" onClick={onClose}>
+          <CloseIcon />
+        </button>
+
+        <button className="modal-arrow-btn modal-arrow-left" onClick={onPrev}>
+          <ChevronLeft />
+        </button>
+        <button className="modal-arrow-btn modal-arrow-right" onClick={onNext}>
+          <ChevronRight />
+        </button>
+
+        <div className="action-modal-header" style={{ color: accentColor }}>
+          <div className="icon-wrapper" style={{ background: `${accentColor}1A` }}>
+            {headerIcon}
+          </div>
           <h2 className="modal-title">{title}</h2>
-          <button className="modal-close" onClick={onClose}>
-            <CloseIcon />
-          </button>
         </div>
-        <div className="modal-body" style={{ flex: 1, padding: '10px 0' }}>
+
+        <div className="action-modal-body">
           {content}
         </div>
-        <div className="modal-footer" style={{ marginTop: 0, justifyContent: 'center' }}>
-          <button className="btn-cancel" style={{ width: '100%' }} onClick={onClose}>Close</button>
+
+        <div className="action-modal-footer">
+          <button className="btn-premium-close" style={{ background: `${accentColor}1A`, color: accentColor }} onClick={onClose}>
+            Got it
+          </button>
         </div>
       </div>
     </div>
@@ -399,17 +426,44 @@ function ActionModal({ isOpen, onClose, type, value }) {
 }
 
 /* ── Featured Card ───────────────────────────────────── */
-function FeaturedCard ({ student, total, index, onPrev, onNext, onDotClick, direction, animKey }) {
+function FeaturedCard({ student, total, index, onPrev, onNext, onDotClick, direction, animKey, onPause }) {
   const [isMinimized, setIsMinimized] = useState(false)
-  const [actionModal, setActionModal] = useState({ isOpen: false, type: '', value: '' })
+  const [actionModal, setActionModal] = useState({ isOpen: false, type: '' })
 
-  function handleActionClick(type, value) {
-    setActionModal({ isOpen: true, type, value })
+  const actionTypes = ['phone', 'email', 'qr', 'facebook']
+
+  function handleActionClick(type) {
+    setActionModal({ isOpen: true, type })
+    if (onPause) onPause(true)
+  }
+
+  function handleCloseModal() {
+    setActionModal({ isOpen: false, type: '' })
+    if (onPause) onPause(false)
+  }
+
+  function handleModalNext() {
+    const currentIndex = actionTypes.indexOf(actionModal.type)
+    const nextIndex = (currentIndex + 1) % actionTypes.length
+    setActionModal({ ...actionModal, type: actionTypes[nextIndex] })
+  }
+
+  function handleModalPrev() {
+    const currentIndex = actionTypes.indexOf(actionModal.type)
+    const prevIndex = (currentIndex - 1 + actionTypes.length) % actionTypes.length
+    setActionModal({ ...actionModal, type: actionTypes[prevIndex] })
+  }
+
+  function getValueForType(type) {
+    if (type === 'phone') return student.phone
+    if (type === 'email') return student.email
+    if (type === 'facebook') return student.facebook
+    return null
   }
 
   return (
     <div className={`featured-card ${isMinimized ? 'minimized' : 'expanded'}`} style={{ position: 'relative' }}>
-      
+
       {/* Minimize/Maximize Toggle */}
       <button className="toggle-size-btn" onClick={() => setIsMinimized(!isMinimized)} title={isMinimized ? "Maximize" : "Minimize"}>
         {isMinimized ? <MaximizeIcon /> : <MinimizeIcon />}
@@ -450,12 +504,12 @@ function FeaturedCard ({ student, total, index, onPrev, onNext, onDotClick, dire
                 </div>
               </div>
             </div>
-            
+
             <div className="featured-actions minimized-actions">
-              <button className="btn-call round-icon" title="Call" onClick={() => handleActionClick('phone', student.phone)}>
+              <button className="btn-call round-icon" title="Call" onClick={() => handleActionClick('phone')}>
                 <PhoneIcon />
               </button>
-              <button className="btn-email round-icon" title="Email" onClick={() => handleActionClick('email', student.email)}>
+              <button className="btn-email round-icon" title="Email" onClick={() => handleActionClick('email')}>
                 <MailIcon />
               </button>
             </div>
@@ -467,7 +521,10 @@ function FeaturedCard ({ student, total, index, onPrev, onNext, onDotClick, dire
             <div className="featured-left-image">
               <div className="image-wrapper">
                 {student.photo ? (
-                  <img src={student.photo} alt={student.name} className="bg-image" />
+                  <>
+                    <img src={student.photo} alt={student.name} className="bg-image-blurred" />
+                    <img src={student.photo} alt={student.name} className="bg-image-clear" />
+                  </>
                 ) : (
                   <div className="placeholder-bg">
                     <PersonIcon className="avatar-icon-placeholder big" />
@@ -479,46 +536,49 @@ function FeaturedCard ({ student, total, index, onPrev, onNext, onDotClick, dire
 
             {/* Right Column: Information */}
             <div className="featured-right-info">
-              
-              <div className="student-profile-top">
-                <div className="student-info-featured">
-                  <div className="student-name-featured large">{student.name}</div>
-                  <div className="student-meta-featured">
-                    <div className="meta-row">
-                      <BookIcon />
-                      <span className="highlight">{student.course}</span>
-                      <span>·</span>
-                      <span className="highlight">{student.year}</span>
-                    </div>
-                    <div className="meta-row">
-                      <BuildingIcon />
-                      <span>{student.school}</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
 
-              {/* Solicitation box */}
-              <div className="solicitation-box">
-                <div className="solicitation-title-row">
-                  <HeartIcon />
-                  <span className="solicitation-title-text">{student.solicitationTitle}</span>
+              <div className="custom-scrollbar" style={{ flex: 1, overflowY: 'hidden', paddingRight: '4px' }}>
+                <h2 style={{ textAlign: 'center', color: '#60a5fa', fontSize: '20px', letterSpacing: '4px', lineHeight: 1.2, marginBottom: '16px', fontWeight: 800, textTransform: 'uppercase' }}>
+                  Be part of my <br /> graduation journey
+                </h2>
+
+                <div style={{ fontSize: '12.5px', color: '#e2e8f0', lineHeight: 1.5, fontWeight: 300 }}>
+                  <p style={{ marginBottom: '12px' }}>
+                    I am <strong style={{ color: '#fff', fontWeight: 600 }}>{student.name}</strong>, enthusiastically completing my degree in <span style={{ color: '#fff', fontWeight: 600 }}>{student.course === 'BSIT' ? 'Bachelor of Science in Information Technology' : student.course}</span> at <strong style={{ color: '#fff', fontWeight: 600 }}>{student.school || "St. John Paul II College of Davao"}</strong>.
+                  </p>
+
+                  <p style={{ marginBottom: '12px' }}>
+                    This milestone isn't just a personal achievement—it's the culmination of shared struggles and unwavering support from people like you. As I approach the finish line, I am humbly reaching out to seek your generosity for my graduation fund.
+                  </p>
+
+                  <div style={{ marginBottom: '12px', background: 'rgba(255,255,255,0.03)', padding: '10px 14px', borderRadius: '8px' }}>
+                    <p style={{ marginBottom: '6px', color: '#93c5fd', fontWeight: 600, fontSize: '12px' }}>Expected Expenses:</p>
+                    <ul style={{ listStyleType: 'disc', margin: 0, paddingLeft: '20px', color: '#fff', fontWeight: 500, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4px', fontSize: '11.5px' }}>
+                      <li>Graduation Fee</li>
+                      <li>Pictorial</li>
+                      <li>Toga Rental</li>
+                      <li>Miscellaneous</li>
+                    </ul>
+                  </div>
+
+                  <p style={{ marginBottom: '0px', fontStyle: 'italic', opacity: 0.9 }}>
+                    Any amount you share will significantly alleviate these costs. Thank you so much for being part of my journey. To God be the Glory!
+                  </p>
                 </div>
-                <p className="solicitation-desc large">{student.description}</p>
               </div>
 
               {/* Action buttons */}
               <div className="featured-actions icon-mode">
-                <button className="btn-call round-icon" id="btn-call-featured" title="Call" onClick={() => handleActionClick('phone', student.phone)}>
+                <button className="btn-call round-icon" id="btn-call-featured" title="Call" onClick={() => handleActionClick('phone')}>
                   <PhoneIcon />
                 </button>
-                <button className="btn-email round-icon" id="btn-email-featured" title="Email" onClick={() => handleActionClick('email', student.email)}>
+                <button className="btn-email round-icon" id="btn-email-featured" title="Email" onClick={() => handleActionClick('email')}>
                   <MailIcon />
                 </button>
-                <button className="btn-qr round-icon" id="btn-qr-featured" title="QR Code" onClick={() => handleActionClick('qr', null)}>
+                <button className="btn-qr round-icon" id="btn-qr-featured" title="QR Code" onClick={() => handleActionClick('qr')}>
                   <QrCodeOutlineIcon />
                 </button>
-                <button className="btn-facebook round-icon" id="btn-facebook-featured" title="Facebook" onClick={() => handleActionClick('facebook', student.facebook)}>
+                <button className="btn-facebook round-icon" id="btn-facebook-featured" title="Facebook" onClick={() => handleActionClick('facebook')}>
                   <FacebookIcon />
                 </button>
               </div>
@@ -542,94 +602,70 @@ function FeaturedCard ({ student, total, index, onPrev, onNext, onDotClick, dire
 
       </div> {/* end card-slide */}
 
-      <ActionModal 
-        isOpen={actionModal.isOpen} 
-        type={actionModal.type} 
-        value={actionModal.value}
-        onClose={() => setActionModal({ ...actionModal, isOpen: false })} 
+      <ActionModal
+        isOpen={actionModal.isOpen}
+        type={actionModal.type}
+        value={getValueForType(actionModal.type)}
+        onClose={handleCloseModal}
+        onPrev={handleModalPrev}
+        onNext={handleModalNext}
       />
     </div>
   )
 }
 
-/* ── Student Row ─────────────────────────────────────── */
-function StudentRow ({ student, onDelete }) {
-  return (
-    <div className="student-row">
-      <div className="student-avatar-sm">
-        {student.photo
-          ? <img src={student.photo} alt={student.name} />
-          : <PersonIcon className="avatar-icon-sm" />
-        }
-      </div>
-      <div className="student-row-info">
-        <div className="student-row-name">
-          <span className="student-row-name-text">{student.name}</span>
-          <span className="badge-active">{student.status}</span>
-        </div>
-        <div className="student-row-solicitation">{student.solicitationTitle}</div>
-        <div className="student-row-meta">
-          {[student.course, student.year, student.school].filter(Boolean).join(' · ')}
-        </div>
-      </div>
-      <div className="student-row-actions">
-        <button className="action-btn" title="Copy link" id={`btn-copy-${student.id}`}><CopyIcon /></button>
-        <button className="action-btn" title="QR Code" id={`btn-qr-${student.id}`}><QrIcon /></button>
-        <button className="action-btn" title="Open" id={`btn-open-${student.id}`}><LinkIcon /></button>
-        <button className="action-btn" title="Edit" id={`btn-edit-${student.id}`}><EditIcon /></button>
-        <button className="action-btn delete" title="Delete" id={`btn-delete-${student.id}`} onClick={() => onDelete(student.id)}><TrashIcon /></button>
-      </div>
-    </div>
-  )
-}
-
 /* ── App ─────────────────────────────────────────────── */
-export default function App () {
+export default function App() {
   const [students, setStudents] = useState(INITIAL_STUDENTS)
   const [featuredIndex, setFeaturedIndex] = useState(0)
   const [showModal, setShowModal] = useState(false)
   const [direction, setDirection] = useState('right')
+  const [isPaused, setIsPaused] = useState(false)
   const timerRef = useRef(null)
 
   const total = students.length
 
   // Auto-advance every 10 seconds
   useEffect(() => {
-    if (total <= 1) return
+    if (total <= 1 || isPaused) {
+      clearInterval(timerRef.current)
+      return
+    }
     timerRef.current = setInterval(() => {
       setDirection('right')
       setFeaturedIndex(i => (i + 1) % total)
     }, 10000)
     return () => clearInterval(timerRef.current)
-  }, [total])
+  }, [total, isPaused])
 
-  function resetTimer () {
+  function resetTimer() {
     clearInterval(timerRef.current)
+    if (isPaused) return
     timerRef.current = setInterval(() => {
       setDirection('right')
       setFeaturedIndex(i => (i + 1) % total)
     }, 10000)
   }
 
-  function prevFeatured () {
+  function prevFeatured() {
     setDirection('left')
     setFeaturedIndex(i => (i - 1 + total) % total)
     resetTimer()
   }
 
-  function nextFeatured () {
+  function nextFeatured() {
     setDirection('right')
     setFeaturedIndex(i => (i + 1) % total)
     resetTimer()
   }
 
-  function goToDot (i) {
+  function goToDot(i) {
     setDirection(i > featuredIndex ? 'right' : 'left')
     setFeaturedIndex(i)
     resetTimer()
   }
 
-  function addStudent (student) {
+  function addStudent(student) {
     setStudents(prev => {
       const next = [...prev, student]
       setFeaturedIndex(next.length - 1)
@@ -637,7 +673,7 @@ export default function App () {
     })
   }
 
-  function deleteStudent (id) {
+  function deleteStudent(id) {
     setStudents(prev => {
       const next = prev.filter(s => s.id !== id)
       if (next.length === 0) { setFeaturedIndex(0); return next }
@@ -654,17 +690,14 @@ export default function App () {
       {/* Navbar */}
       <nav className="navbar" id="main-navbar">
         <div className="navbar-brand">
-          <div className="navbar-icon">
-            <GradCapIcon />
+          <div className="navbar-icon-wrapper" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#ffffff', width: 44, height: 44, borderRadius: 8, padding: 4 }}>
+            <img src="/Logo-Image.png" alt="Logo" className="navbar-logo-img" style={{ height: '100%', width: '100%', objectFit: 'contain' }} />
           </div>
-          <div>
+          <div style={{ marginLeft: 12 }}>
             <div className="navbar-title">Graduation Solicitation</div>
             <div className="navbar-subtitle">Student fundraising profiles</div>
           </div>
         </div>
-        <button className="btn-add-student" id="btn-open-add-student" onClick={() => setShowModal(true)}>
-          + Add Student
-        </button>
       </nav>
 
       {/* Main content */}
@@ -680,6 +713,7 @@ export default function App () {
             onDotClick={goToDot}
             direction={direction}
             animKey={`${featuredIndex}-${direction}`}
+            onPause={(paused) => setIsPaused(paused)}
           />
         )}
 
@@ -688,29 +722,7 @@ export default function App () {
           <div className="progress-bar-fill" style={{ width: `${progressPercent}%` }} />
         </div>
 
-        {/* All Students */}
-
-        {students.length === 0 ? (
-          <div className="empty-state">
-            <PersonIcon className="avatar-icon-placeholder" />
-            <p>No students yet. Add one to get started!</p>
-          </div>
-        ) : (
-          <div className="student-list">
-            {students.map(s => (
-              <StudentRow key={s.id} student={s} onDelete={deleteStudent} />
-            ))}
-          </div>
-        )}
       </main>
-
-      {/* Add Student Modal */}
-      {showModal && (
-        <AddStudentModal
-          onClose={() => setShowModal(false)}
-          onAdd={addStudent}
-        />
-      )}
     </>
   )
 }
