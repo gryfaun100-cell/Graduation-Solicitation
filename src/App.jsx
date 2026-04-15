@@ -28,7 +28,7 @@ const INITIAL_STUDENTS = [
     school: 'St. John Paul II College of Davao',
     solicitationTitle: 'Graduation Funds',
     description:
-      '"I am organizing a medical mission to a remote community in Palawan. We need funds for medicines, transportation, and supplies. Your generosity can help provide healthcare to those in need."',
+      'I am Anthony John Vergel R. Realiza, a graduating BSIT student seeking kind support to help cover my graduation expenses such as fees, toga, and pictorial. Any contribution, big or small, would mean a lot to me and my family. Thank you for being part of this milestone.',
     phone: '+63 945 335 6016',
     email: 'anthonyrealiza@gmail.com',
     facebook: 'Anthony John Vergel Realiza',
@@ -44,7 +44,7 @@ const INITIAL_STUDENTS = [
     school: 'St. John Paul II College of Davao',
     solicitationTitle: 'Graduation Fund',
     description:
-      '"Our engineering team is competing in a national robotics competition. We need support for materials, registration fees, and travel expenses."',
+      'I am Aaron Mark Y. Dimzon, proudly completing my BSIT degree and seeking generous support for my graduation-related expenses. Any help you extend will be greatly appreciated and will make a big difference in this important milestone. Thank you, and to God be the glory!',
     phone: '+63 953 2733 909',
     email: 'aarondimzon@gmail.com',
     facebook: 'Aaron Dimzon',
@@ -60,7 +60,7 @@ const INITIAL_STUDENTS = [
     school: 'St. John Paul II College of Davao',
     solicitationTitle: 'Graduation Fund',
     description:
-      '"Our engineering team is competing in a national robotics competition. We need support for materials, registration fees, and travel expenses."',
+      'I am Manuel Ryan T. Sarabia, a 4th year BSIT student seeking support to help cover my graduation expenses such as yearbook, toga, fees, and pictorial. Any contribution would mean a lot to me and my family. Thank you from the bottom of my heart.',
     phone: '+63 991 096 7409',
     email: 'manuelsarabia163@gmail.com',
     facebook: 'Manuel Sarabia',
@@ -76,7 +76,7 @@ const INITIAL_STUDENTS = [
     school: 'St. John Paul II College of Davao',
     solicitationTitle: 'Graduation Fund',
     description:
-      '"Our engineering team is competing in a national robotics competition. We need support for materials, registration fees, and travel expenses."',
+      'I am Lyndon A. Tabinas, a graduating BSIT student seeking support to help cover my graduation expenses such as fees, toga, and other needs. Any assistance is greatly appreciated. Thank you so much!',
     phone: '+63 912 345 6789',
     email: 'lyndontabinas@gmail.com',
     facebook: 'Lyndon Tabinas',
@@ -345,271 +345,126 @@ function AddStudentModal({ onClose, onAdd }) {
   )
 }
 
-/* ── Action Modal ────────────────────────────────────── */
-function ActionModal({ isOpen, onClose, type, value, onPrev, onNext }) {
-  if (!isOpen) return null;
-
-  let title = '';
-  let content = null;
-  let headerIcon = null;
-
-  const accentColor = type === 'phone' ? '#f59e0b' :
-    type === 'email' ? '#0ea5e9' :
-      type === 'facebook' ? '#1877f2' :
-        '#10b981';
-
-  switch (type) {
-    case 'phone':
-      title = 'Phone Number';
-      headerIcon = <PhoneIcon />;
-      content = <div className="modal-data-text" style={{ color: accentColor }}>{value || 'Not provided'}</div>;
-      break;
-    case 'email':
-      title = 'Email Address';
-      headerIcon = <MailIcon />;
-      content = <div className="modal-data-text" style={{ color: accentColor }}>{value || 'Not provided'}</div>;
-      break;
-    case 'facebook':
-      title = 'Facebook Profile';
-      headerIcon = <FacebookIcon />;
-      content = <div className="modal-data-text" style={{ color: accentColor }}>{value || 'Not provided'}</div>;
-      break;
-    case 'qr':
-      title = 'Scan QR Code';
-      headerIcon = <QrCodeOutlineIcon />;
-      content = (
-        <div style={{ textAlign: 'center', marginTop: 10, color: '#8a9ab5' }}>
-          <div style={{ background: '#ffffff', padding: '16px', borderRadius: '16px', display: 'inline-block', marginBottom: '16px' }}>
-            <QrCodeOutlineIcon style={{ width: 120, height: 120, display: 'block', color: '#1a1f3a' }} />
-          </div>
-          <p style={{ fontSize: '15px' }}>Official QR Code is being generated and will be updated shortly.</p>
-        </div>
-      );
-      break;
-    default:
-      break;
-  }
-
-  return (
-    <div className="modal-overlay" onClick={e => e.target === e.currentTarget && onClose()}>
-      <div className="modal action-modal-premium" style={{ borderTop: `4px solid ${accentColor}` }}>
-        <button className="modal-close-premium" onClick={onClose}>
-          <CloseIcon />
-        </button>
-
-        <button className="modal-arrow-btn modal-arrow-left" onClick={onPrev}>
-          <ChevronLeft />
-        </button>
-        <button className="modal-arrow-btn modal-arrow-right" onClick={onNext}>
-          <ChevronRight />
-        </button>
-
-        <div className="action-modal-header" style={{ color: accentColor }}>
-          <div className="icon-wrapper" style={{ background: `${accentColor}1A` }}>
-            {headerIcon}
-          </div>
-          <h2 className="modal-title">{title}</h2>
-        </div>
-
-        <div className="action-modal-body">
-          {content}
-        </div>
-
-        <div className="action-modal-footer">
-          <button className="btn-premium-close" style={{ background: `${accentColor}1A`, color: accentColor }} onClick={onClose}>
-            Got it
-          </button>
-        </div>
-      </div>
-    </div>
-  )
-}
-
-/* ── Featured Card ───────────────────────────────────── */
+/* ── Featured Card (Template-011 Style) ──────────────── */
 function FeaturedCard({ student, total, index, onPrev, onNext, onDotClick, direction, animKey, onPause }) {
-  const [isMinimized, setIsMinimized] = useState(false)
-  const [actionModal, setActionModal] = useState({ isOpen: false, type: '' })
-
-  const actionTypes = ['phone', 'email', 'qr', 'facebook']
-
-  function handleActionClick(type) {
-    setActionModal({ isOpen: true, type })
-    if (onPause) onPause(true)
-  }
-
-  function handleCloseModal() {
-    setActionModal({ isOpen: false, type: '' })
-    if (onPause) onPause(false)
-  }
-
-  function handleModalNext() {
-    const currentIndex = actionTypes.indexOf(actionModal.type)
-    const nextIndex = (currentIndex + 1) % actionTypes.length
-    setActionModal({ ...actionModal, type: actionTypes[nextIndex] })
-  }
-
-  function handleModalPrev() {
-    const currentIndex = actionTypes.indexOf(actionModal.type)
-    const prevIndex = (currentIndex - 1 + actionTypes.length) % actionTypes.length
-    setActionModal({ ...actionModal, type: actionTypes[prevIndex] })
-  }
-
-  function getValueForType(type) {
-    if (type === 'phone') return student.phone
-    if (type === 'email') return student.email
-    if (type === 'facebook') return student.facebook
-    return null
-  }
-
   return (
-    <div className={`featured-card ${isMinimized ? 'minimized' : 'expanded'}`} style={{ position: 'relative' }}>
-
-      {/* Minimize/Maximize Toggle */}
-      <button className="toggle-size-btn" onClick={() => setIsMinimized(!isMinimized)} title={isMinimized ? "Maximize" : "Minimize"}>
-        {isMinimized ? <MaximizeIcon /> : <MinimizeIcon />}
-      </button>
-
-      {/* Nav arrows always accessible */}
-      <button className="carousel-btn" onClick={onPrev} id="carousel-prev" style={{ position: 'absolute', left: 16, top: '50%', transform: 'translateY(-50%)', zIndex: 10 }}>
+    <div
+      className="glass-card-wrapper"
+      onMouseEnter={() => onPause && onPause(true)}
+      onMouseLeave={() => onPause && onPause(false)}
+    >
+      {/* Nav Arrows */}
+      <button className="carousel-btn glass-nav-prev" onClick={onPrev} id="carousel-prev" title="Previous">
         <ChevronLeft />
       </button>
-      <button className="carousel-btn" onClick={onNext} id="carousel-next" style={{ position: 'absolute', right: 16, top: '50%', transform: 'translateY(-50%)', zIndex: 10 }}>
+      <button className="carousel-btn glass-nav-next" onClick={onNext} id="carousel-next" title="Next">
         <ChevronRight />
       </button>
 
-      {/* Animated content wrapper */}
-      <div className={`card-slide card-slide-${direction}`} key={animKey} style={{ height: '100%' }}>
+      <div className={`card-slide card-slide-${direction}`} key={animKey}>
+        <div className="glass-card">
 
-        {isMinimized ? (
-          // --- MINIMIZED LAYOUT ---
-          <div className="featured-minimized-layout">
-            <div className="student-profile-top" style={{ marginBottom: 0, alignItems: 'center' }}>
-              <div className="student-avatar-featured" style={{ width: 60, height: 60 }}>
+          {/* Card Header: School */}
+          <div className="glass-card-header">
+            <div className="glass-card-school-icon">
+              <GradCapIcon style={{ width: 18, height: 18, color: 'var(--gold)' }} />
+            </div>
+            <span className="glass-card-school-name">{student.school || 'St. John Paul II College of Davao'}</span>
+            <div className="glass-card-header-dots">
+              <span /><span /><span /><span />
+            </div>
+          </div>
+
+          {/* 3-Column Body */}
+          <div className="glass-card-body">
+
+            {/* Col 1 — Photo + Name */}
+            <div className="glass-card-photo-col">
+              <div className="glass-card-avatar">
                 {student.photo
                   ? <img src={student.photo} alt={student.name} />
-                  : <PersonIcon className="avatar-icon-placeholder" style={{ width: 30, height: 30 }} />
+                  : <PersonIcon className="glass-avatar-placeholder" />
                 }
               </div>
-              <div className="student-info-featured" style={{ paddingTop: 0 }}>
-                <div className="student-name-featured" style={{ fontSize: 20 }}>{student.name}</div>
-                <div className="student-meta-featured" style={{ flexDirection: 'row', gap: 12 }}>
-                  <div className="meta-row">
-                    <BookIcon />
-                    <span className="highlight">{student.course}</span>
-                  </div>
-                  <div className="meta-row">
-                    <BuildingIcon />
-                    <span>{student.school}</span>
-                  </div>
+              <div className="glass-card-student-name">{student.name}</div>
+              <div className="glass-card-meta-group">
+                <div className="glass-card-student-meta">
+                  <BookIcon /> <span>{student.course}</span>
+                </div>
+                <div className="glass-card-student-meta">
+                  <BuildingIcon /> <span>{student.year}</span>
+                </div>
+                <div className="glass-card-student-meta">
+                  <GradCapIcon style={{ width: 13, height: 13 }} /> <span>Graduating Student</span>
                 </div>
               </div>
             </div>
 
-            <div className="featured-actions minimized-actions">
-              <button className="btn-call round-icon" title="Call" onClick={() => handleActionClick('phone')}>
-                <PhoneIcon />
-              </button>
-              <button className="btn-email round-icon" title="Email" onClick={() => handleActionClick('email')}>
-                <MailIcon />
-              </button>
+            {/* Col 2 — Description */}
+            <div className="glass-card-info-col">
+              <div className="glass-card-solicitation-label">
+                <GradCapIcon style={{ width: 13, height: 13 }} />
+                {student.solicitationTitle || 'Graduation Fund'}
+              </div>
+              <p className="glass-card-description">
+                {student.description}
+              </p>
             </div>
+
+            {/* Col 3 — Contact Details + Actions */}
+            <div className="glass-card-contact-col">
+              <div className="glass-contact-heading">Contact Info</div>
+
+              <div className="glass-contact-item">
+                <div className="glass-contact-label">📱 Phone / GCash</div>
+                <div className="glass-contact-value">{student.phone || 'N/A'}</div>
+              </div>
+
+              <div className="glass-contact-item">
+                <div className="glass-contact-label">✉️ Email</div>
+                <div className="glass-contact-value">{student.email || 'N/A'}</div>
+              </div>
+
+              <div className="glass-contact-item">
+                <div className="glass-contact-label">👤 Facebook</div>
+                <div className="glass-contact-value">{student.facebook || student.name}</div>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="glass-card-actions">
+                <a
+                  href={`tel:${student.phone}`}
+                  className="glass-action-btn glass-action-primary"
+                  id="btn-call-featured"
+                >
+                  <PhoneIcon /> <span>Call Now</span>
+                </a>
+                <a
+                  href={`mailto:${student.email}`}
+                  className="glass-action-btn glass-action-secondary"
+                  id="btn-email-featured"
+                >
+                  <MailIcon /> <span>Send Email</span>
+                </a>
+              </div>
+            </div>
+
           </div>
-        ) : (
-          // --- EXPANDED LAYOUT ---
-          <div className="featured-expanded-layout">
-            {/* Left Column: Image Background */}
-            <div className="featured-left-image">
-              <div className="image-wrapper">
-                {student.photo ? (
-                  <>
-                    <img src={student.photo} alt={student.name} className="bg-image-blurred" />
-                    <img src={student.photo} alt={student.name} className="bg-image-clear" />
-                  </>
-                ) : (
-                  <div className="placeholder-bg">
-                    <PersonIcon className="avatar-icon-placeholder big" />
-                  </div>
-                )}
-                <div className="gradient-overlay"></div>
-              </div>
-            </div>
+        </div>
+      </div>
 
-            {/* Right Column: Information */}
-            <div className="featured-right-info">
-
-              <div className="custom-scrollbar" style={{ flex: 1, overflowY: 'hidden', paddingRight: '4px' }}>
-                <h2 style={{ textAlign: 'center', color: '#60a5fa', fontSize: '20px', letterSpacing: '4px', lineHeight: 1.2, marginBottom: '16px', fontWeight: 800, textTransform: 'uppercase' }}>
-                  Be part of my <br /> graduation journey
-                </h2>
-
-                <div style={{ fontSize: '12.5px', color: '#e2e8f0', lineHeight: 1.5, fontWeight: 300 }}>
-                  <p style={{ marginBottom: '12px' }}>
-                    I am <strong style={{ color: '#fff', fontWeight: 600 }}>{student.name}</strong>, enthusiastically completing my degree in <span style={{ color: '#fff', fontWeight: 600 }}>{student.course === 'BSIT' ? 'Bachelor of Science in Information Technology' : student.course}</span> at <strong style={{ color: '#fff', fontWeight: 600 }}>{student.school || "St. John Paul II College of Davao"}</strong>.
-                  </p>
-
-                  <p style={{ marginBottom: '12px' }}>
-                    This milestone isn't just a personal achievement—it's the culmination of shared struggles and unwavering support from people like you. As I approach the finish line, I am humbly reaching out to seek your generosity for my graduation fund.
-                  </p>
-
-                  <div style={{ marginBottom: '12px', background: 'rgba(255,255,255,0.03)', padding: '10px 14px', borderRadius: '8px' }}>
-                    <p style={{ marginBottom: '6px', color: '#93c5fd', fontWeight: 600, fontSize: '12px' }}>Expected Expenses:</p>
-                    <ul style={{ listStyleType: 'disc', margin: 0, paddingLeft: '20px', color: '#fff', fontWeight: 500, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4px', fontSize: '11.5px' }}>
-                      <li>Graduation Fee</li>
-                      <li>Pictorial</li>
-                      <li>Toga Rental</li>
-                      <li>Miscellaneous</li>
-                    </ul>
-                  </div>
-
-                  <p style={{ marginBottom: '0px', fontStyle: 'italic', opacity: 0.9 }}>
-                    Any amount you share will significantly alleviate these costs. Thank you so much for being part of my journey. To God be the Glory!
-                  </p>
-                </div>
-              </div>
-
-              {/* Action buttons */}
-              <div className="featured-actions icon-mode">
-                <button className="btn-call round-icon" id="btn-call-featured" title="Call" onClick={() => handleActionClick('phone')}>
-                  <PhoneIcon />
-                </button>
-                <button className="btn-email round-icon" id="btn-email-featured" title="Email" onClick={() => handleActionClick('email')}>
-                  <MailIcon />
-                </button>
-                <button className="btn-qr round-icon" id="btn-qr-featured" title="QR Code" onClick={() => handleActionClick('qr')}>
-                  <QrCodeOutlineIcon />
-                </button>
-                <button className="btn-facebook round-icon" id="btn-facebook-featured" title="Facebook" onClick={() => handleActionClick('facebook')}>
-                  <FacebookIcon />
-                </button>
-              </div>
-
-              {/* Dots at bottom of info */}
-              <div className="carousel-dots-bottom">
-                {Array.from({ length: total }).map((_, i) => (
-                  <div
-                    key={i}
-                    className={`dot ${i === index ? 'active' : ''}`}
-                    onClick={() => onDotClick(i)}
-                    role="button"
-                    aria-label={`Go to student ${i + 1}`}
-                  />
-                ))}
-              </div>
-
-            </div>
-          </div>
-        )}
-
-      </div> {/* end card-slide */}
-
-      <ActionModal
-        isOpen={actionModal.isOpen}
-        type={actionModal.type}
-        value={getValueForType(actionModal.type)}
-        onClose={handleCloseModal}
-        onPrev={handleModalPrev}
-        onNext={handleModalNext}
-      />
+      {/* Carousel Dots */}
+      <div className="glass-carousel-dots">
+        {Array.from({ length: total }).map((_, i) => (
+          <div
+            key={i}
+            className={`dot ${i === index ? 'active' : ''}`}
+            onClick={() => onDotClick(i)}
+            role="button"
+            aria-label={`Go to student ${i + 1}`}
+          />
+        ))}
+      </div>
     </div>
   )
 }
@@ -690,36 +545,77 @@ export default function App() {
       {/* Navbar */}
       <nav className="navbar" id="main-navbar">
         <div className="navbar-brand">
-          <div className="navbar-icon-wrapper" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#ffffff', width: 44, height: 44, borderRadius: 8, padding: 4 }}>
-            <img src="/Logo-Image.png" alt="Logo" className="navbar-logo-img" style={{ height: '100%', width: '100%', objectFit: 'contain' }} />
+          <div className="navbar-top-row">
+            <div className="navbar-icon-wrapper" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#f5a623', width: 44, height: 44, borderRadius: 10, padding: 4, boxShadow: '0 0 14px rgba(245,166,35,0.4)' }}>
+              <img src="/Logo-Image.png" alt="Logo" className="navbar-logo-img" style={{ height: '100%', width: '100%', objectFit: 'contain' }} />
+            </div>
+            <div>
+              <div className="navbar-title">St. John Paul II College of Davao</div>
+              <div className="navbar-subtitle">Class of 2026 · Graduation Solicitation</div>
+            </div>
           </div>
-          <div style={{ marginLeft: 12 }}>
-            <div className="navbar-title">Graduation Solicitation</div>
-            <div className="navbar-subtitle">Student fundraising profiles</div>
-          </div>
+          <div className="navbar-divider" />
         </div>
       </nav>
 
       {/* Main content */}
       <main className="page-content">
-        {/* Featured carousel */}
-        {featured && (
-          <FeaturedCard
-            student={featured}
-            total={total}
-            index={featuredIndex}
-            onPrev={prevFeatured}
-            onNext={nextFeatured}
-            onDotClick={goToDot}
-            direction={direction}
-            animKey={`${featuredIndex}-${direction}`}
-            onPause={(paused) => setIsPaused(paused)}
-          />
-        )}
 
-        {/* Progress bar */}
-        <div className="progress-bar-wrap">
-          <div className="progress-bar-fill" style={{ width: `${progressPercent}%` }} />
+        {/* Hero Layout */}
+        <div className="hero-section">
+
+          {/* Compact Hero Info Row */}
+          <div className="hero-left">
+            <div className="hero-class-badge">
+              <GradCapIcon style={{ width: 12, height: 12 }} />
+              SJPII Davao · Class of 2026
+            </div>
+
+            <div className="hero-badge">
+              <GradCapIcon style={{ width: 12, height: 12 }} />
+              Support our Graduates
+            </div>
+
+            <h1 className="hero-heading">
+              Help Us Cross the&nbsp;<span className="gold-text">Graduation Stage</span>
+            </h1>
+
+            <p className="hero-subtext">
+              Browse profiles and help our graduating students celebrate their milestone.
+            </p>
+
+            <div className="hero-year-row">
+              <div className="hero-year">2026</div>
+              <div className="hero-year-text">Class Year</div>
+            </div>
+
+            <div className="hero-tap-hint">
+              <GradCapIcon style={{ width: 12, height: 12 }} />
+              Tap a profile to reach out and show your support
+            </div>
+          </div>
+
+          {/* Full-Width Featured Card */}
+          <div className="hero-right">
+            <div className="progress-bar-wrap" style={{ width: '100%' }}>
+              <div className="progress-bar-fill" style={{ width: `${progressPercent}%` }} />
+            </div>
+
+            {featured && (
+              <FeaturedCard
+                student={featured}
+                total={total}
+                index={featuredIndex}
+                onPrev={prevFeatured}
+                onNext={nextFeatured}
+                onDotClick={goToDot}
+                direction={direction}
+                animKey={`${featuredIndex}-${direction}`}
+                onPause={(paused) => setIsPaused(paused)}
+              />
+            )}
+          </div>
+
         </div>
 
       </main>
