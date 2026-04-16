@@ -12,7 +12,7 @@ const INITIAL_STUDENTS = [
     school: 'St. John Paul II College of Davao',
     solicitationTitle: 'Graduation Funds',
     description:
-      'I am currently raising funds to support my upcoming graduation expenses. Your contribution will help cover essential costs such as graduation fees, attire, and other academic requirements. Any support is greatly appreciated as I work toward completing this important milestone.',
+      'I am currently raising funds to support my upcoming graduation expenses. Your contribution will help cover essential costs such as graduation fees, attire, and other academic requirements. Any support is greatly appreciated as I work toward completing this important milestone. Expenses: ',
     phone: '+63 948 251 4126',
     email: 'roberthermoso003@gmail.com',
     facebook: 'Robert Louie Hermoso',
@@ -443,9 +443,23 @@ function FeaturedCard({ student, total, index, onPrev, onNext, onDotClick, direc
                 <GradCapIcon style={{ width: 13, height: 13 }} />
                 {student.solicitationTitle || 'Graduation Fund'}
               </div>
-              <p className="glass-card-description">
-                {student.description}
-              </p>
+              <div className="glass-card-description-flip-container">
+                <div className="glass-card-description-inner">
+                  <div className="glass-card-description-front">
+                    <div className="glass-card-description-text">{student.description}</div>
+                    <div className="flip-hint">Hover to see Expenses ↻</div>
+                  </div>
+                  <div className="glass-card-description-back">
+                    <h4 className="expenses-title">Expenses Include:</h4>
+                    <ul className="expenses-list">
+                      <li>Graduation Fee</li>
+                      <li>Graduation Pictorial</li>
+                      <li>Toga Rental</li>
+                      <li>Other Graduation Related Expenses</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Col 3 — Contact Details + Actions */}
