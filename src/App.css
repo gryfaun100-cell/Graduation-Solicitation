@@ -96,12 +96,12 @@
 .page-content {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 16px 48px 16px;
+  padding: 5px 48px 16px;
   width: 100%;
   min-height: calc(100vh - 62px);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 /* ===== HERO SECTION ===== */
@@ -363,9 +363,9 @@
 /* Card Body */
 .glass-card-body {
   display: grid;
-  grid-template-columns: 225px 1fr 245px;
+  grid-template-columns: 250px 1fr 245px;
   gap: 0;
-  min-height: 330px;
+  height: 480px; /* Fixed height to prevent bouncing layout */
 }
 
 /* Photo Column */
@@ -391,8 +391,8 @@
 }
 
 .glass-card-avatar {
-  width: 140px;
-  height: 168px;
+  width: 190px;
+  height: 230px;
   border-radius: 16px;
   overflow: hidden;
   border: 2px solid var(--border-gold);
@@ -492,7 +492,8 @@
   flex: 1;
   perspective: 1000px;
   width: 100%;
-  min-height: 240px;
+  height: 100%;
+  min-height: 320px;
 }
 
 .glass-card-description-inner {
@@ -1375,6 +1376,25 @@
 }
 
 /* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--navy-darkest);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(245, 166, 35, 0.4);
+  border-radius: 5px;
+  border: 2px solid var(--navy-darkest);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(245, 166, 35, 0.8);
+}
+
 .modal::-webkit-scrollbar {
   width: 5px;
 }
@@ -1386,6 +1406,7 @@
 .modal::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 3px;
+  border: none;
 }
 
 .modal::-webkit-scrollbar-thumb:hover {
