@@ -481,22 +481,39 @@ function FeaturedCard({ student, total, index, onPrev, onNext, onDotClick, direc
                 <div className="glass-contact-value">{student.facebook || student.name}</div>
               </div>
 
-              {/* Action Buttons */}
-              <div className="glass-card-actions">
-                <button
-                  onClick={() => onShowQr(student)}
-                  className="glass-action-btn glass-action-primary"
-                  id="btn-qr-featured"
-                >
-                  <QrCodeOutlineIcon style={{ width: 17, height: 17 }} /> <span>GCash / QR</span>
-                </button>
-                <a
-                  href={`mailto:${student.email}`}
-                  className="glass-action-btn glass-action-secondary"
-                  id="btn-email-featured"
-                >
-                  <MailIcon /> <span>Test Button</span>
-                </a>
+              {/* Direct QR Code Display */}
+              <div className="glass-card-qr-display" style={{ marginTop: '16px', display: 'flex', justifyContent: 'center' }}>
+                {student.qrCode ? (
+                  <img 
+                    src={student.qrCode} 
+                    alt={`${student.name} QR Code`} 
+                    style={{ 
+                      width: '100%', 
+                      maxWidth: '180px', 
+                      borderRadius: '12px', 
+                      border: '2px solid var(--border-gold)', 
+                      boxShadow: '0 8px 24px rgba(0,0,0,0.3)',
+                      transition: 'transform 0.3s ease'
+                    }} 
+                  />
+                ) : (
+                  <div style={{ 
+                    width: '100%', 
+                    maxWidth: '180px', 
+                    padding: '40px 10px', 
+                    background: 'var(--glass-bg)', 
+                    border: '1px dashed var(--border-subtle)', 
+                    borderRadius: '12px', 
+                    color: 'var(--text-muted)', 
+                    textAlign: 'center',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center'
+                  }}>
+                    <QrCodeOutlineIcon style={{ width: 24, height: 24, marginBottom: '8px', opacity: 0.5 }} />
+                    <div style={{ fontSize: '13px' }}>No QR Code available</div>
+                  </div>
+                )}
               </div>
             </div>
 
