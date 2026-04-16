@@ -12,7 +12,7 @@ const INITIAL_STUDENTS = [
     school: 'St. John Paul II College of Davao',
     solicitationTitle: 'Graduation Funds',
     description:
-      'I am currently raising funds to support my upcoming graduation expenses. Your contribution will help cover essential costs such as graduation fees, attire, and other academic requirements. Any support is greatly appreciated as I work toward completing this important milestone. Expenses: ',
+      'I am currently raising funds to support my upcoming graduation expenses. Your contribution will help cover essential costs such as graduation fees, attire, and other academic requirements. Any support is greatly appreciated as I work toward completing this important milestone.',
     phone: '+63 948 251 4126',
     email: 'roberthermoso003@gmail.com',
     facebook: 'Robert Louie Hermoso',
