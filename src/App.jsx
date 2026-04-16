@@ -33,7 +33,7 @@ const INITIAL_STUDENTS = [
     phone: '+63 945 335 6016',
     email: 'anthonyrealiza@gmail.com',
     facebook: 'Anthony John Vergel Realiza',
-    photo: '/Student-picture-005.png',
+    photo: '/Student-picture-0055.png',
     qrCode: '/qr-code-Anthony.png',
     status: 'Active',
   },
