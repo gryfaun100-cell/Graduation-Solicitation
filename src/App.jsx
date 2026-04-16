@@ -620,7 +620,7 @@ export default function App() {
           <div className="hero-left">
             <div className="hero-class-badge">
               <GradCapIcon style={{ width: 12, height: 12 }} />
-              SJPII Davao · Class of 2026
+              SJPII College of Davao · Class of 2026
             </div>
 
             <div className="hero-badge">
