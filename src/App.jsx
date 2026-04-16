@@ -50,7 +50,7 @@ const INITIAL_STUDENTS = [
     phone: '+63 953 2733 909',
     email: 'aarondimzon@gmail.com',
     facebook: 'Aaron Dimzon',
-    photo: '/Student-picture-007.png',
+    photo: '/Student-picture-007.jpg',
     qrCode: '/qr-code-Aaron.png',
     status: 'Active',
   },
@@ -408,8 +408,8 @@ function FeaturedCard({ student, total, index, onPrev, onNext, onDotClick, direc
 
           {/* Card Header: School */}
           <div className="glass-card-header">
-            <div className="glass-card-school-icon">
-              <GradCapIcon style={{ width: 18, height: 18, color: 'var(--gold)' }} />
+            <div className="glass-card-school-icon" style={{ backgroundColor: 'white', borderRadius: '15%', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
+              <img src="/Logo-Image.png" alt="School Logo" style={{ width: '25px', height: '25px', objectFit: 'contain' }} />
             </div>
             <span className="glass-card-school-name">{student.school || 'St. John Paul II College of Davao'}</span>
             <div className="glass-card-header-dots">
