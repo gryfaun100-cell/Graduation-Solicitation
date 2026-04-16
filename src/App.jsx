@@ -17,6 +17,7 @@ const INITIAL_STUDENTS = [
     email: 'roberthermoso003@gmail.com',
     facebook: 'Robert Louie Hermoso',
     photo: '/Student-picture-004.png',
+    qrCode: '/qr-code-Robert.png',
     status: 'Active',
   },
   {
@@ -33,6 +34,7 @@ const INITIAL_STUDENTS = [
     email: 'anthonyrealiza@gmail.com',
     facebook: 'Anthony John Vergel Realiza',
     photo: '/Student-picture-005.png',
+    qrCode: '/qr-code-Anthony.png',
     status: 'Active',
   },
   {
@@ -49,6 +51,7 @@ const INITIAL_STUDENTS = [
     email: 'aarondimzon@gmail.com',
     facebook: 'Aaron Dimzon',
     photo: '/Student-picture-007.png',
+    qrCode: '/qr-code-Aaron.png',
     status: 'Active',
   },
   {
@@ -65,6 +68,7 @@ const INITIAL_STUDENTS = [
     email: 'manuelsarabia163@gmail.com',
     facebook: 'Manuel Sarabia',
     photo: '/Student-picture-006.png',
+    qrCode: '/qr-code-Manuel.png',
     status: 'Active',
   },
   {
@@ -81,6 +85,7 @@ const INITIAL_STUDENTS = [
     email: 'lyndontabinas@gmail.com',
     facebook: 'Lyndon Tabinas',
     photo: '/Student-picture-008.jpg',
+    qrCode: '/qr-code-Lyndon.png',
     status: 'Active',
   },
 ]
@@ -345,8 +350,39 @@ function AddStudentModal({ onClose, onAdd }) {
   )
 }
 
+/* ── Qr Modal ────────────────────────────────────────── */
+function QrModal({ student, onClose }) {
+  if (!student) return null;
+  return (
+    <div className="modal-overlay" onClick={e => e.target === e.currentTarget && onClose()}>
+      <div className="modal" style={{ maxWidth: '360px', textAlign: 'center' }}>
+        <div className="modal-header">
+          <h2 className="modal-title" style={{ fontSize: '16px' }}>Scan to Support</h2>
+          <button className="modal-close" onClick={onClose} id="close-qr-modal-btn">
+            <CloseIcon />
+          </button>
+        </div>
+        <div className="modal-body" style={{ padding: '24px 20px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '16px' }}>
+          {student.qrCode ? (
+            <img src={student.qrCode} alt={`${student.name} QR Code`} style={{ width: '100%', maxWidth: '280px', borderRadius: '16px', border: '2px solid var(--border-gold)', boxShadow: '0 8px 24px rgba(0,0,0,0.3)' }} />
+          ) : (
+            <div style={{ width: '100%', padding: '60px 20px', background: 'var(--glass-bg)', border: '1px dashed var(--border-subtle)', borderRadius: '16px', color: 'var(--text-muted)' }}>
+              <QrCodeOutlineIcon style={{ width: 32, height: 32, marginBottom: '12px', opacity: 0.5 }} />
+              <div>No QR Code available.</div>
+            </div>
+          )}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+            <div style={{ fontSize: '15px', color: 'var(--white)', fontWeight: '600' }}>{student.name}</div>
+            <div style={{ fontSize: '13px', color: 'var(--gold)' }}>{student.phone}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 /* ── Featured Card (Template-011 Style) ──────────────── */
-function FeaturedCard({ student, total, index, onPrev, onNext, onDotClick, direction, animKey, onPause }) {
+function FeaturedCard({ student, total, index, onPrev, onNext, onDotClick, direction, animKey, onPause, onShowQr }) {
   return (
     <div
       className="glass-card-wrapper"
@@ -433,13 +469,13 @@ function FeaturedCard({ student, total, index, onPrev, onNext, onDotClick, direc
 
               {/* Action Buttons */}
               <div className="glass-card-actions">
-                <a
-                  href={`tel:${student.phone}`}
+                <button
+                  onClick={() => onShowQr(student)}
                   className="glass-action-btn glass-action-primary"
-                  id="btn-call-featured"
+                  id="btn-qr-featured"
                 >
-                  <PhoneIcon /> <span>Call Now</span>
-                </a>
+                  <QrCodeOutlineIcon style={{ width: 17, height: 17 }} /> <span>GCash / QR</span>
+                </button>
                 <a
                   href={`mailto:${student.email}`}
                   className="glass-action-btn glass-action-secondary"
@@ -477,6 +513,7 @@ export default function App() {
   const [showModal, setShowModal] = useState(false)
   const [direction, setDirection] = useState('right')
   const [isPaused, setIsPaused] = useState(false)
+  const [qrStudent, setQrStudent] = useState(null)
   const timerRef = useRef(null)
 
   const total = students.length
@@ -613,13 +650,16 @@ export default function App() {
                 direction={direction}
                 animKey={`${featuredIndex}-${direction}`}
                 onPause={(paused) => setIsPaused(paused)}
+                onShowQr={(student) => setQrStudent(student)}
               />
             )}
           </div>
 
         </div>
-
       </main>
+
+      {/* QR Code Modal for specific student */}
+      {qrStudent && <QrModal student={qrStudent} onClose={() => setQrStudent(null)} />}
     </>
   )
 }
