@@ -631,21 +631,6 @@ export default function App() {
 
   return (
     <>
-      {/* Navbar */}
-      <nav className="navbar" id="main-navbar">
-        <div className="navbar-brand">
-          <div className="navbar-top-row">
-            <div className="navbar-icon-wrapper" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#ffffff', width: 44, height: 44, borderRadius: 10, padding: 4, boxShadow: '0 0 14px rgba(255,255,255,0.2)' }}>
-              <img src="/Logo-Image.png" alt="Logo" className="navbar-logo-img" style={{ height: '100%', width: '100%', objectFit: 'contain' }} />
-            </div>
-            <div>
-              <div className="navbar-title">St. John Paul II College of Davao</div>
-              <div className="navbar-subtitle">Class of 2026 · Graduation Solicitation</div>
-            </div>
-          </div>
-          <div className="navbar-divider" />
-        </div>
-      </nav>
 
       {/* Blended Background Graduation Decor */}
       <img 
