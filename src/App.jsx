@@ -397,7 +397,7 @@ function FeaturedCard({ student, total, index, onPrev, onNext, onDotClick, direc
         <ChevronRight />
       </button>
 
-      <div className={`card-slide card-slide-${direction}`} key={animKey}>
+      <div className={`card-slide card-slide-${direction}`} key={animKey} style={{ position: 'relative' }}>
         <div className="glass-card">
 
           {/* Card Header: School */}
@@ -414,12 +414,32 @@ function FeaturedCard({ student, total, index, onPrev, onNext, onDotClick, direc
           {/* 3-Column Body */}
           <div className="glass-card-body">
 
-            <div className="glass-card-photo-col">
-              <div className="glass-card-avatar">
-                {student.photo
-                  ? <img src={student.photo} alt={student.name} />
-                  : <PersonIcon className="glass-avatar-placeholder" />
-                }
+            <div className="glass-card-photo-col" style={{ position: 'relative' }}>
+              {/* Subtle yellow/gold backlight for avatar */}
+              <div style={{ position: 'absolute', top: '15%', left: '50%', transform: 'translateX(-50%)', width: '130px', height: '130px', background: 'var(--gold)', filter: 'blur(45px)', opacity: 0.35, zIndex: 0, pointerEvents: 'none', borderRadius: '50%' }} />
+
+              <div style={{ position: 'relative', zIndex: 1, marginTop: '20px' }}>
+                {/* The Hat placed specifically on the avatar image edge */}
+                <img 
+                  src="/Graduation-Hat-picture-014.png" 
+                  alt="Graduation Hat" 
+                  style={{ 
+                    position: 'absolute', 
+                    top: '-36px', 
+                    left: '-28px', 
+                    width: '105px', 
+                    zIndex: 10, 
+                    filter: 'drop-shadow(0 12px 18px rgba(0,0,0,0.6))', 
+                    transform: 'rotate(-15deg)',
+                    pointerEvents: 'none'
+                  }} 
+                />
+                <div className="glass-card-avatar">
+                  {student.photo
+                    ? <img src={student.photo} alt={student.name} />
+                    : <PersonIcon className="glass-avatar-placeholder" />
+                  }
+                </div>
               </div>
               <div className="glass-card-photo-details">
                 <div className="glass-card-student-name">{student.name}</div>
@@ -627,8 +647,30 @@ export default function App() {
         </div>
       </nav>
 
+      {/* Blended Background Graduation Decor */}
+      <img 
+        src="/Graduation-picture-015.png" 
+        alt="Graduation Silhouette" 
+        style={{
+          position: 'fixed',
+          top: '-20px',
+          left: '-20px',
+          width: '650px',
+          height: 'auto',
+          zIndex: 0,
+          opacity: 0.18,
+          mixBlendMode: 'screen',
+          pointerEvents: 'none',
+          userSelect: 'none'
+        }}
+      />
+
+      {/* Yellow/Gold Ambient Glow to blend theme */}
+      <div style={{ position: 'fixed', top: '10%', left: '-5%', width: '400px', height: '400px', background: 'var(--gold)', filter: 'blur(150px)', opacity: 0.12, zIndex: -1, pointerEvents: 'none', borderRadius: '50%' }} />
+      <div style={{ position: 'fixed', bottom: '-5%', right: '-5%', width: '500px', height: '500px', background: 'var(--gold-bright)', filter: 'blur(180px)', opacity: 0.1, zIndex: -1, pointerEvents: 'none', borderRadius: '50%' }} />
+
       {/* Main content */}
-      <main className="page-content">
+      <main className="page-content" style={{ position: 'relative', zIndex: 1 }}>
 
         {/* Hero Layout */}
         <div className="hero-section">
