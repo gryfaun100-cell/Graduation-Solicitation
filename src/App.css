@@ -234,19 +234,7 @@
     gap: 28px;
   }
   .hero-right {
-    padding: 0 48px;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero-section {
-    grid-template-columns: 1fr;
-  }
-  .hero-right {
-    padding: 0 32px;
-  }
-  .hero-heading {
-    font-size: 22px;
+    padding: 0 24px;
   }
 }
 
@@ -416,6 +404,13 @@
   width: 60px;
   height: 60px;
   color: var(--text-muted);
+}
+
+.glass-card-photo-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .glass-card-student-name {
@@ -614,15 +609,23 @@
 }
 
 @media (max-width: 960px) {
-  .glass-card-body {
-    grid-template-columns: 180px 1fr;
+  .hero-section {
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
-  .glass-card-contact-col {
-    display: none;
+  .hero-left {
+    align-items: center;
+    text-align: center;
   }
-}
-
-@media (max-width: 640px) {
+  .hero-subtext {
+    max-width: 600px;
+  }
+  .hero-year-row {
+    justify-content: center;
+  }
+  .hero-tap-hint {
+    justify-content: center;
+  }
   .glass-card-body {
     grid-template-columns: 1fr;
   }
@@ -630,23 +633,102 @@
     flex-direction: row;
     border-right: none;
     border-bottom: 1px solid var(--border-subtle);
-    padding: 14px 16px;
-    gap: 14px;
-    align-items: flex-start;
+    padding: 24px;
+    gap: 20px;
+    align-items: center;
   }
-  .glass-card-avatar {
-    width: 76px;
-    height: 92px;
-    border-radius: 12px;
-    margin-bottom: 0;
+  .glass-card-photo-col::after {
+    display: none;
+  }
+  .glass-card-photo-details {
+    align-items: flex-start;
   }
   .glass-card-student-name {
     text-align: left;
-    font-size: 14px;
-    max-width: none;
+    font-size: 18px;
+    padding: 0;
+    margin-bottom: 6px;
   }
-  .glass-nav-prev { left: 2px; }
-  .glass-nav-next { right: 2px; }
+  .glass-card-meta-group {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
+  }
+  .glass-card-avatar {
+    width: 100px;
+    height: 120px;
+    margin-bottom: 0;
+  }
+  .glass-card-contact-col {
+    border-left: none;
+    border-top: 1px solid var(--border-subtle);
+    padding: 24px;
+  }
+  .glass-card-contact-col::before {
+    display: none;
+  }
+  .glass-contact-item {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px dashed rgba(255,255,255,0.1);
+    padding-bottom: 8px;
+  }
+  .glass-contact-item:last-of-type {
+    border-bottom: none;
+  }
+  .glass-card-actions {
+    flex-direction: row;
+    margin-top: 12px;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .navbar {
+    padding: 10px 16px;
+  }
+  .page-content {
+    padding: 16px;
+  }
+  .hero-right {
+    padding: 0 8px;
+  }
+  .hero-heading {
+    font-size: 26px;
+  }
+  .glass-card-photo-col {
+    padding: 18px;
+    gap: 14px;
+  }
+  .glass-card-avatar {
+    width: 80px;
+    height: 96px;
+  }
+  .glass-card-student-name {
+    font-size: 15px;
+  }
+  .glass-card-student-meta {
+    font-size: 11px;
+  }
+  .glass-card-info-col {
+    padding: 20px 18px;
+  }
+  .glass-card-contact-col {
+    padding: 20px 18px;
+  }
+  .glass-contact-label {
+    font-size: 9.5px;
+  }
+  .glass-contact-value {
+    font-size: 12px;
+  }
+  .glass-card-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .glass-nav-prev { left: 4px; width: 36px; height: 36px; }
+  .glass-nav-next { right: 4px; width: 36px; height: 36px; }
 }
 
 

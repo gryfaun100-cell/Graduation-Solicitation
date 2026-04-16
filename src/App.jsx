@@ -378,7 +378,6 @@ function FeaturedCard({ student, total, index, onPrev, onNext, onDotClick, direc
           {/* 3-Column Body */}
           <div className="glass-card-body">
 
-            {/* Col 1 — Photo + Name */}
             <div className="glass-card-photo-col">
               <div className="glass-card-avatar">
                 {student.photo
@@ -386,16 +385,18 @@ function FeaturedCard({ student, total, index, onPrev, onNext, onDotClick, direc
                   : <PersonIcon className="glass-avatar-placeholder" />
                 }
               </div>
-              <div className="glass-card-student-name">{student.name}</div>
-              <div className="glass-card-meta-group">
-                <div className="glass-card-student-meta">
-                  <BookIcon /> <span>{student.course}</span>
-                </div>
-                <div className="glass-card-student-meta">
-                  <BuildingIcon /> <span>{student.year}</span>
-                </div>
-                <div className="glass-card-student-meta">
-                  <GradCapIcon style={{ width: 13, height: 13 }} /> <span>Graduating Student</span>
+              <div className="glass-card-photo-details">
+                <div className="glass-card-student-name">{student.name}</div>
+                <div className="glass-card-meta-group">
+                  <div className="glass-card-student-meta">
+                    <BookIcon /> <span>{student.course}</span>
+                  </div>
+                  <div className="glass-card-student-meta">
+                    <BuildingIcon /> <span>{student.year}</span>
+                  </div>
+                  <div className="glass-card-student-meta">
+                    <GradCapIcon style={{ width: 13, height: 13 }} /> <span>Graduating Student</span>
+                  </div>
                 </div>
               </div>
             </div>
