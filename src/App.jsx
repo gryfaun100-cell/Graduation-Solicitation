@@ -495,7 +495,7 @@ function FeaturedCard({ student, total, index, onPrev, onNext, onDotClick, direc
                   className="glass-action-btn glass-action-secondary"
                   id="btn-email-featured"
                 >
-                  <MailIcon /> <span>Send Email</span>
+                  <MailIcon /> <span>Test Button</span>
                 </a>
               </div>
             </div>
