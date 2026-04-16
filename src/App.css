@@ -492,6 +492,7 @@
   flex: 1;
   perspective: 1000px;
   width: 100%;
+  min-height: 240px;
 }
 
 .glass-card-description-inner {
