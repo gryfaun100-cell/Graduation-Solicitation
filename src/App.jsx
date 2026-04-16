@@ -383,6 +383,12 @@ function QrModal({ student, onClose }) {
 
 /* ── Featured Card (Template-011 Style) ──────────────── */
 function FeaturedCard({ student, total, index, onPrev, onNext, onDotClick, direction, animKey, onPause, onShowQr }) {
+  const [isFlipped, setIsFlipped] = useState(false)
+
+  useEffect(() => {
+    setIsFlipped(false)
+  }, [student])
+
   return (
     <div
       className="glass-card-wrapper"
@@ -423,16 +429,7 @@ function FeaturedCard({ student, total, index, onPrev, onNext, onDotClick, direc
                 <img 
                   src="/Graduation-Hat-picture-014.png" 
                   alt="Graduation Hat" 
-                  style={{ 
-                    position: 'absolute', 
-                    top: '-36px', 
-                    left: '-28px', 
-                    width: '105px', 
-                    zIndex: 10, 
-                    filter: 'drop-shadow(0 12px 18px rgba(0,0,0,0.6))', 
-                    transform: 'rotate(-15deg)',
-                    pointerEvents: 'none'
-                  }} 
+                  className="graduation-hat-decor"
                 />
                 <div className="glass-card-avatar">
                   {student.photo
@@ -463,11 +460,14 @@ function FeaturedCard({ student, total, index, onPrev, onNext, onDotClick, direc
                 <GradCapIcon style={{ width: 13, height: 13 }} />
                 {student.solicitationTitle || 'Graduation Fund'}
               </div>
-              <div className="glass-card-description-flip-container">
+              <div 
+                className={`glass-card-description-flip-container ${isFlipped ? 'flipped' : ''}`}
+                onClick={() => setIsFlipped(!isFlipped)}
+              >
                 <div className="glass-card-description-inner">
                   <div className="glass-card-description-front">
                     <div className="glass-card-description-text">{student.description}</div>
-                    <div className="flip-hint">Hover to see Expenses ↻</div>
+                    <div className="flip-hint">Tap / Hover to see Expenses ↻</div>
                   </div>
                   <div className="glass-card-description-back">
                     <h4 className="expenses-title">Expenses Include:</h4>
