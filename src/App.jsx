@@ -584,7 +584,7 @@ export default function App() {
       <nav className="navbar" id="main-navbar">
         <div className="navbar-brand">
           <div className="navbar-top-row">
-            <div className="navbar-icon-wrapper" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#f5a623', width: 44, height: 44, borderRadius: 10, padding: 4, boxShadow: '0 0 14px rgba(245,166,35,0.4)' }}>
+            <div className="navbar-icon-wrapper" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#ffffff', width: 44, height: 44, borderRadius: 10, padding: 4, boxShadow: '0 0 14px rgba(255,255,255,0.2)' }}>
               <img src="/Logo-Image.png" alt="Logo" className="navbar-logo-img" style={{ height: '100%', width: '100%', objectFit: 'contain' }} />
             </div>
             <div>
