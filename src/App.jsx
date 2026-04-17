@@ -50,8 +50,8 @@ const INITIAL_STUDENTS = [
     phone: '+63 953 2733 909',
     email: 'aarondimzon@gmail.com',
     facebook: 'Aaron Dimzon',
-    photo: '/Student-picture-007.jpg',
-    qrCode: '/qr-code-Aaron.png',
+    photo: '/Student-picture-007.png',
+    qrCode: '/qr-code-Aaron.jpg',
     status: 'Active',
   },
   {
@@ -65,7 +65,7 @@ const INITIAL_STUDENTS = [
     description:
       'I am Manuel Ryan T. Sarabia, a 4th year BSIT student seeking support to help cover my graduation expenses such as yearbook, toga, fees, and pictorial. Any contribution would mean a lot to me and my family. Thank you from the bottom of my heart.',
     phone: '+63 991 096 7409',
-    email: 'manuelsarabia163@gmail.com',
+    email: 'manuelsarabia160@gmail.com',
     facebook: 'Manuel Sarabia',
     photo: '/Student-picture-006.png',
     qrCode: '/qr-code-Manuel.png',
